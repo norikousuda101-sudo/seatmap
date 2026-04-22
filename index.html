@@ -69,11 +69,12 @@ body.editing .seat.dragging{z-index:100;opacity:.85}
 body.editing .seat:hover .seat-btns{display:flex}
 .sb{width:20px;height:20px;border-radius:50%;color:#fff;font-size:10px;line-height:20px;
     text-align:center;cursor:pointer;border:none;box-shadow:0 1px 4px rgba(0,0,0,.3);
-    user-select:none;font-weight:700}
+    user-select:none;font-weight:700;display:none}
 .sb.rot{background:var(--edit-accent)}
 .sb.del{background:var(--red);position:absolute;top:-11px;left:-11px}
 .sb.rot:hover{background:#b45309;transform:scale(1.15)}
 .sb.del:hover{background:#7f1d1d;transform:scale(1.15)}
+body.editing .seat:hover .sb{display:block}
 
 /* 色変更ボタン（座席ホバー時に横並びで表示） */
 .color-btns{display:none;position:absolute;bottom:-24px;left:50%;
