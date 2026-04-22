@@ -147,7 +147,6 @@ body.editing .seat:hover .rot-btn,body.editing .seat:hover .del-btn{display:bloc
   </div>
 </div>
 <div class="toasts" id="toasts"></div>
-
 <script>
 const SEATS_ORIG = [{"col":3,"row":18,"x":190,"y":381,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_001"},{"col":4,"row":18,"x":275,"y":393,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_002"},{"col":2,"row":20,"x":144,"y":436,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_003"},{"col":3,"row":20,"x":189,"y":434,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_004"},{"col":3,"row":20,"x":244,"y":435,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_005"},{"col":5,"row":20,"x":360,"y":424,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_006"},{"col":6,"row":20,"x":396,"y":422,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_007"},{"col":4,"row":21,"x":275,"y":446,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_008"},{"col":5,"row":21,"x":311,"y":448,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_009"},{"col":0,"row":22,"x":35,"y":469,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_010"},{"col":1,"row":22,"x":71,"y":468,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_011"},{"col":5,"row":22,"x":360,"y":480,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_012"},{"col":6,"row":22,"x":395,"y":480,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_013"},{"col":1,"row":23,"x":119,"y":490,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_014"},{"col":2,"row":23,"x":157,"y":493,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_015"},{"col":3,"row":23,"x":189,"y":488,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_016"},{"col":3,"row":23,"x":244,"y":489,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_017"},{"col":4,"row":23,"x":275,"y":501,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_018"},{"col":5,"row":23,"x":311,"y":502,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_019"},{"col":7,"row":23,"x":433,"y":485,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_020"},{"col":7,"row":23,"x":486,"y":484,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_021"},{"col":8,"row":23,"x":511,"y":485,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_022"},{"col":9,"row":23,"x":554,"y":484,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_023"},{"col":9,"row":23,"x":590,"y":505,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_024"},{"col":10,"row":23,"x":634,"y":501,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_025"},{"col":11,"row":23,"x":722,"y":500,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_026"},{"col":0,"row":24,"x":35,"y":523,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_027"},{"col":1,"row":24,"x":71,"y":523,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_028"},{"col":10,"row":24,"x":677,"y":505,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_029"},{"col":1,"row":25,"x":119,"y":545,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_030"},{"col":2,"row":25,"x":144,"y":546,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_031"},{"col":3,"row":25,"x":190,"y":542,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_032"},{"col":3,"row":25,"x":243,"y":543,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_033"},{"col":5,"row":25,"x":359,"y":534,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_034"},{"col":6,"row":25,"x":397,"y":535,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_035"},{"col":7,"row":25,"x":434,"y":536,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_036"},{"col":7,"row":25,"x":487,"y":541,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_037"},{"col":8,"row":25,"x":512,"y":538,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_038"},{"col":9,"row":25,"x":554,"y":536,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_039"},{"col":4,"row":26,"x":275,"y":556,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_040"},{"col":5,"row":26,"x":311,"y":557,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_041"},{"col":9,"row":26,"x":590,"y":556,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_042"},{"col":10,"row":26,"x":634,"y":551,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_043"},{"col":10,"row":26,"x":678,"y":559,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_044"},{"col":11,"row":26,"x":721,"y":556,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_045"},{"col":12,"row":26,"x":749,"y":553,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_046"},{"col":12,"row":26,"x":804,"y":557,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_047"},{"col":0,"row":27,"x":35,"y":577,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_048"},{"col":1,"row":27,"x":71,"y":577,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_049"},{"col":1,"row":28,"x":118,"y":597,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_050"},{"col":2,"row":28,"x":157,"y":599,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_051"},{"col":3,"row":28,"x":190,"y":597,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_052"},{"col":3,"row":28,"x":244,"y":597,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_053"},{"col":5,"row":28,"x":360,"y":590,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_054"},{"col":6,"row":28,"x":397,"y":590,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_055"},{"col":7,"row":28,"x":433,"y":591,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_056"},{"col":7,"row":28,"x":489,"y":596,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_057"},{"col":8,"row":28,"x":512,"y":592,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_058"},{"col":9,"row":28,"x":553,"y":592,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_059"},{"col":4,"row":29,"x":275,"y":611,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_060"},{"col":5,"row":29,"x":311,"y":611,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_061"},{"col":9,"row":29,"x":590,"y":609,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_062"},{"col":10,"row":29,"x":637,"y":608,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_063"},{"col":10,"row":29,"x":678,"y":610,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_064"},{"col":11,"row":29,"x":720,"y":609,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_065"},{"col":12,"row":29,"x":748,"y":608,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_066"},{"col":12,"row":29,"x":806,"y":611,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_067"},{"col":13,"row":29,"x":831,"y":622,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_068"},{"col":14,"row":29,"x":868,"y":624,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_069"},{"col":0,"row":30,"x":35,"y":632,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_070"},{"col":1,"row":30,"x":71,"y":632,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_071"},{"col":5,"row":30,"x":360,"y":645,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_072"},{"col":6,"row":30,"x":397,"y":645,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_073"},{"col":7,"row":30,"x":432,"y":644,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_074"},{"col":7,"row":30,"x":489,"y":646,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_075"},{"col":1,"row":31,"x":117,"y":653,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_076"},{"col":2,"row":31,"x":157,"y":653,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_077"},{"col":3,"row":31,"x":190,"y":651,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_078"},{"col":3,"row":31,"x":245,"y":651,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_079"},{"col":4,"row":31,"x":275,"y":665,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_080"},{"col":5,"row":31,"x":311,"y":666,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_081"},{"col":8,"row":31,"x":518,"y":650,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_082"},{"col":9,"row":31,"x":555,"y":650,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_083"},{"col":9,"row":31,"x":591,"y":662,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_084"},{"col":10,"row":31,"x":637,"y":662,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_085"},{"col":10,"row":31,"x":679,"y":663,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_086"},{"col":11,"row":31,"x":723,"y":660,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_087"},{"col":12,"row":31,"x":748,"y":663,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_088"},{"col":12,"row":31,"x":809,"y":667,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_089"},{"col":0,"row":32,"x":35,"y":687,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_090"},{"col":1,"row":32,"x":71,"y":688,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_091"},{"col":13,"row":32,"x":832,"y":677,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_092"},{"col":14,"row":32,"x":868,"y":678,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_093"},{"col":1,"row":33,"x":115,"y":709,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_094"},{"col":2,"row":33,"x":157,"y":707,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_095"},{"col":3,"row":33,"x":190,"y":705,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_096"},{"col":3,"row":33,"x":244,"y":706,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_097"},{"col":5,"row":33,"x":359,"y":699,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_098"},{"col":6,"row":33,"x":397,"y":699,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_099"},{"col":7,"row":33,"x":433,"y":699,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_100"},{"col":7,"row":33,"x":487,"y":700,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_101"},{"col":8,"row":33,"x":517,"y":700,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_102"},{"col":9,"row":33,"x":556,"y":703,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_103"},{"col":10,"row":33,"x":635,"y":711,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_104"},{"col":4,"row":34,"x":275,"y":720,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_105"},{"col":5,"row":34,"x":311,"y":722,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_106"},{"col":9,"row":34,"x":591,"y":712,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_107"},{"col":10,"row":34,"x":680,"y":712,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_108"},{"col":11,"row":34,"x":723,"y":716,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_109"},{"col":12,"row":34,"x":751,"y":716,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_110"},{"col":12,"row":34,"x":806,"y":721,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_111"},{"col":0,"row":35,"x":35,"y":741,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_112"},{"col":1,"row":35,"x":71,"y":741,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_113"},{"col":13,"row":35,"x":860,"y":733,"w":49,"h":52,"img":"image2.jpg","rot":180.0,"flipH":false,"flipV":false,"id":"seat_114"},{"col":1,"row":36,"x":115,"y":763,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_115"},{"col":2,"row":36,"x":157,"y":761,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_116"},{"col":3,"row":36,"x":189,"y":760,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_117"},{"col":3,"row":36,"x":243,"y":761,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_118"},{"col":5,"row":36,"x":356,"y":753,"w":49,"h":52,"img":"image2.jpg","rot":180.0,"flipH":false,"flipV":false,"id":"seat_119"},{"col":6,"row":36,"x":397,"y":753,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_120"},{"col":7,"row":36,"x":432,"y":753,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_121"},{"col":7,"row":36,"x":487,"y":753,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_122"},{"col":8,"row":36,"x":517,"y":754,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_123"},{"col":9,"row":36,"x":556,"y":755,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_124"},{"col":4,"row":37,"x":301,"y":774,"w":49,"h":52,"img":"image2.jpg","rot":270.0,"flipH":false,"flipV":false,"id":"seat_125"},{"col":12,"row":37,"x":760,"y":789,"w":49,"h":52,"img":"image3.jpg","rot":90.0,"flipH":true,"flipV":false,"id":"seat_126"},{"col":1,"row":38,"x":71,"y":796,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_127"},{"col":1,"row":38,"x":73,"y":794,"w":49,"h":52,"img":"image2.jpg","rot":90.0,"flipH":false,"flipV":false,"id":"seat_128"},{"col":9,"row":38,"x":602,"y":794,"w":49,"h":52,"img":"image3.jpg","rot":0.0,"flipH":true,"flipV":false,"id":"seat_129"},{"col":11,"row":38,"x":682,"y":794,"w":49,"h":52,"img":"image3.jpg","rot":0.0,"flipH":true,"flipV":false,"id":"seat_130"}];
 const GAS = 'https://script.google.com/macros/s/AKfycbxGzANm-qj0Dyaa1-EAApEIlnXag4cnOxEkF0rCThBXYsUMycw_3pZ3btIzzcmuw6Vg7w/exec';
@@ -159,7 +158,7 @@ let zoom     = 1;
 let editId   = null;
 let autoTimer = null;
 
-// ── GAS通信: 1件ずつ送受信 ───────────────────────────────
+// ── GAS通信 ──────────────────────────────────────────────
 async function gasGet(params) {
   const url = GAS + '?' + new URLSearchParams({...params, t: Date.now()});
   const res = await fetch(url);
@@ -167,72 +166,83 @@ async function gasGet(params) {
   return res.json();
 }
 
-// 全件読み込み
-async function loadFromGAS(silent = false) {
+// 全件読み込み（名前＋レイアウト）
+async function loadFromGAS(silent=false) {
   if (!silent) setSync('saving', '読み込み中...');
   try {
     const data = await gasGet({action: 'load'});
     if (data.names) names = data.names;
+    // レイアウトが保存されていれば上書き、なければSEATS_ORIGを使う
+    if (data.layout && data.layout.length > 0) seats = data.layout;
     renderSeats();
-    setSync('ok', '同期済 ' + new Date().toLocaleTimeString('ja-JP', {hour:'2-digit',minute:'2-digit'}));
-    if (!silent) toast('✅ 最新データを読み込みました', 'ok');
+    setSync('ok', '同期済 ' + new Date().toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit'}));
+    if (!silent) toast('✅ 最新データを読み込みました','ok');
   } catch(e) {
     setSync('err', '接続エラー');
-    if (!silent) toast('読み込みエラー: ' + e.message, 'err');
+    if (!silent) toast('読み込みエラー: ' + e.message,'err');
   }
 }
 
-// 名前を1件だけ保存
+// 名前を1件保存
 async function saveSingleName(id, name) {
-  setSync('saving', '保存中...');
+  setSync('saving','保存中...');
   try {
-    await gasGet({action: 'setName', id, name: encodeURIComponent(name)});
-    setSync('ok', '保存済 ' + new Date().toLocaleTimeString('ja-JP', {hour:'2-digit',minute:'2-digit',second:'2-digit'}));
+    await gasGet({action:'setName', id, name:encodeURIComponent(name)});
+    setSync('ok','保存済 '+new Date().toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit',second:'2-digit'}));
   } catch(e) {
-    setSync('err', '保存エラー');
-    toast('保存エラー: ' + e.message, 'err');
+    setSync('err','保存エラー');
+    toast('保存エラー: '+e.message,'err');
+  }
+}
+
+// レイアウトを1席分保存（x,y,rot）
+async function saveSeatLayout(seat) {
+  setSync('saving','保存中...');
+  try {
+    const val = encodeURIComponent(JSON.stringify({x:seat.x,y:seat.y,rot:seat.rot||0}));
+    await gasGet({action:'setSeat', id:seat.id, val});
+    setSync('ok','保存済 '+new Date().toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit',second:'2-digit'}));
+  } catch(e) {
+    setSync('err','保存エラー');
+    toast('保存エラー: '+e.message,'err');
   }
 }
 
 // 全員クリア
 async function clearAllNames() {
-  setSync('saving', '保存中...');
   try {
-    await gasGet({action: 'clearAll'});
-    setSync('ok', '保存済');
-  } catch(e) {
-    setSync('err', '保存エラー');
-  }
+    await gasGet({action:'clearAll'});
+  } catch(e) { toast('エラー: '+e.message,'err'); }
 }
 
-// 自動更新（編集中・入力中は止める）
+// 自動更新（編集中・入力中は停止）
 function startAutoReload() {
   stopAutoReload();
-  autoTimer = setInterval(() => { if (!editMode) loadFromGAS(true); }, 30000);
+  autoTimer = setInterval(()=>{ if(!editMode) loadFromGAS(true); }, 30000);
 }
 function stopAutoReload() {
-  if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+  if(autoTimer){ clearInterval(autoTimer); autoTimer=null; }
 }
 
 // ── SVG描画 ──────────────────────────────────────────────
-function makeSVG(vw, vh, name) {
-  const pad=2, deskX=pad, deskY=pad, deskW=vw-pad*2, deskH=Math.round(vh*0.72)-pad;
-  const chW=Math.round(vw*0.42), chH=Math.round(vh*0.22);
-  const chX=Math.round((vw-chW)/2), chY=deskY+deskH+Math.round(vh*0.03);
+function makeSVG(vw,vh,name) {
+  const pad=2,deskX=pad,deskY=pad,deskW=vw-pad*2,deskH=Math.round(vh*0.72)-pad;
+  const chW=Math.round(vw*0.42),chH=Math.round(vh*0.22);
+  const chX=Math.round((vw-chW)/2),chY=deskY+deskH+Math.round(vh*0.03);
   const chR=Math.round(chH*0.45);
-  const deskFill=name?'#8ab0e0':'#c0d4f0', chairFill='#a8c4e8', stroke='#3a68b0';
+  const deskFill=name?'#8ab0e0':'#c0d4f0',chairFill='#a8c4e8',stroke='#3a68b0';
   let textEl='';
   if(name){
     const fs=Math.min(13,Math.max(7,Math.round(deskH*0.30)));
-    const charsPerLine=Math.max(1,Math.floor((deskW-6)/fs));
+    const cpl=Math.max(1,Math.floor((deskW-6)/fs));
     const lines=[];
-    for(let i=0;i<name.length;i+=charsPerLine) lines.push(name.slice(i,i+charsPerLine));
-    const lineH=fs*1.4, totalH=lines.length*lineH;
-    const startY=deskY+deskH/2-totalH/2+fs*0.8, cx=deskX+deskW/2;
-    const tspans=lines.map((ln,i)=>`<tspan x="${cx.toFixed(1)}" dy="${i===0?0:lineH.toFixed(1)}">${ln}</tspan>`).join('');
-    textEl=`<text x="${cx.toFixed(1)}" y="${startY.toFixed(1)}" text-anchor="middle"
+    for(let i=0;i<name.length;i+=cpl) lines.push(name.slice(i,i+cpl));
+    const lineH=fs*1.4,totalH=lines.length*lineH;
+    const sy=deskY+deskH/2-totalH/2+fs*0.8,cx=deskX+deskW/2;
+    const ts=lines.map((ln,i)=>`<tspan x="${cx.toFixed(1)}" dy="${i===0?0:lineH.toFixed(1)}">${ln}</tspan>`).join('');
+    textEl=`<text x="${cx.toFixed(1)}" y="${sy.toFixed(1)}" text-anchor="middle"
       font-family="'Noto Sans JP',sans-serif" font-size="${fs}" font-weight="700" fill="#152f80"
-      style="pointer-events:none">${tspans}</text>`;
+      style="pointer-events:none">${ts}</text>`;
   }
   return `<svg width="${vw}" height="${vh}" viewBox="0 0 ${vw} ${vh}"
     xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible">
@@ -252,14 +262,14 @@ function renderSeats() {
     const name=names[seat.id]||'';
     if(name) filled++;
     const rot=seat.rot||0;
-    const cx=seat.x+seat.w/2, cy=seat.y+seat.h/2;
+    const cx=seat.x+seat.w/2,cy=seat.y+seat.h/2;
     let vw,vh,extraRot;
     if(rot===0){vw=seat.h;vh=seat.w;extraRot=270;}
     else if(rot===90){vw=seat.w;vh=seat.h;extraRot=180;}
     else if(rot===180){vw=seat.h;vh=seat.w;extraRot=90;}
     else{vw=seat.h;vh=seat.w;extraRot=0;}
     const el=document.createElement('div');
-    el.className='seat'; el.dataset.id=seat.id;
+    el.className='seat';el.dataset.id=seat.id;
     el.style.cssText=`left:${Math.round(cx)}px;top:${Math.round(cy)}px;width:${vw}px;height:${vh}px;transform:translate(-50%,-50%) rotate(${extraRot}deg);`;
     el.innerHTML=makeSVG(vw,vh,name);
     const rotBtn=document.createElement('button');
@@ -278,7 +288,7 @@ function renderSeats() {
   document.getElementById('count').textContent=`${filled} / ${seats.length} 名入力済`;
 }
 
-// ── ドラッグ（レイアウトはローカルのみ保存）─────────────
+// ── ドラッグ ─────────────────────────────────────────────
 function makeDraggable(el,seat){
   let sx,sy,sx0,sy0,moved=false;
   function down(e){
@@ -299,7 +309,7 @@ function makeDraggable(el,seat){
       el.classList.remove('dragging');
       document.removeEventListener('mousemove',move);document.removeEventListener('mouseup',up);
       document.removeEventListener('touchmove',move);document.removeEventListener('touchend',up);
-      if(moved) toast('📌 位置を変更しました（GitHubへの反映は管理者が行います）','info');
+      if(moved){ saveSeatLayout(seat); toast('📌 位置を保存中...','info'); }
     }
     document.addEventListener('mousemove',move);document.addEventListener('mouseup',up);
     document.addEventListener('touchmove',move,{passive:false});document.addEventListener('touchend',up);
@@ -312,13 +322,15 @@ async function rotateSeat(id){
   const s=seats.find(s=>s.id===id);if(!s)return;
   s.rot=((s.rot||0)+90)%360;
   renderSeats();
-  toast('↻ 回転しました（GitHubへの反映は管理者が行います）','info');
+  await saveSeatLayout(s);
+  toast('↻ 向きを保存しました','ok');
 }
 async function deleteSeat(id){
   if(!confirm('この座席を削除しますか？'))return;
   seats=seats.filter(s=>s.id!==id);delete names[id];
   renderSeats();
-  toast('削除しました（GitHubへの反映は管理者が行います）','info');
+  try{ await gasGet({action:'deleteSeat',id}); }catch(e){}
+  toast('削除しました','ok');
 }
 
 function toggleEdit(){
@@ -327,7 +339,7 @@ function toggleEdit(){
   ['hd','tb','mapBox'].forEach(id=>document.getElementById(id).classList.toggle('edit-mode',editMode));
   document.getElementById('viewTools').style.display=editMode?'none':'flex';
   document.getElementById('editTools').style.display=editMode?'flex':'none';
-  if(editMode)stopAutoReload(); else startAutoReload();
+  if(editMode)stopAutoReload();else startAutoReload();
 }
 
 function applyZoom(){document.getElementById('mapScaler').style.transform=`scale(${zoom})`;}
@@ -355,19 +367,16 @@ async function saveName(){
   if(!editId)return;
   const val=document.getElementById('nameInput').value.trim();
   const id=editId;
-  if(val) names[id]=val; else delete names[id];
-  closeModal();
-  renderSeats();
-  await saveSingleName(id, val);
+  if(val)names[id]=val;else delete names[id];
+  closeModal();renderSeats();
+  await saveSingleName(id,val);
   toast(val?`✔ "${val}" を保存しました`:'空席にしました','ok');
 }
 async function clearSeat(){
   if(!editId)return;
   const id=editId;
-  delete names[id];
-  closeModal();
-  renderSeats();
-  await saveSingleName(id, '');
+  delete names[id];closeModal();renderSeats();
+  await saveSingleName(id,'');
   toast('空席にしました','ok');
 }
 function onKey(e){if(e.key==='Enter')saveName();if(e.key==='Escape')closeModal();}
