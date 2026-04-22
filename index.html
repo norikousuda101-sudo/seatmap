@@ -354,9 +354,12 @@ function renderSeats() {
     else{vw=seat.h;vh=seat.w;extraRot=0;}
     const el=document.createElement('div');
     el.className='seat';el.dataset.id=seat.id;
-    el.style.cssText=`left:${Math.round(cx)}px;top:${Math.round(cy)}px;`+
+    // translate(-50%,-50%)をやめてleft/topは左上基準に
+    // transform-originをcenter centerにしてrotateのみ
+    el.style.cssText=`left:${Math.round(cx - vw/2)}px;top:${Math.round(cy - vh/2)}px;`+
       `width:${vw}px;height:${vh}px;`+
-      `transform:translate(-50%,-50%) rotate(${extraRot}deg);`;
+      `transform-origin:center center;`+
+      `transform:rotate(${extraRot}deg);`;
     el.innerHTML=makeSVG(vw,vh,name,colorKey);
     const rotBtn=document.createElement('button');
     rotBtn.className='sb rot';rotBtn.textContent='↻';
@@ -415,8 +418,11 @@ function makeDraggable(el,seat){
       if(Math.abs(dx)>2||Math.abs(dy)>2)moved=true;
       if(!moved)return;
       seat.x=Math.round(sx0+dx);seat.y=Math.round(sy0+dy);
-      const ncx=seat.x+seat.w/2,ncy=seat.y+seat.h/2;
-      el.style.left=Math.round(ncx)+'px';el.style.top=Math.round(ncy)+'px';
+      const rot2=seat.rot||0;
+      const vw2=(rot2===90||rot2===270)?seat.h:seat.w;
+      const vh2=(rot2===90||rot2===270)?seat.w:seat.h;
+      const cx2=seat.x+seat.w/2,cy2=seat.y+seat.h/2;
+      el.style.left=Math.round(cx2-vw2/2)+'px';el.style.top=Math.round(cy2-vh2/2)+'px';
     }
     function up(){
       el.classList.remove('dragging');
