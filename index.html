@@ -206,37 +206,7 @@ async function loadFromGAS(silent) {
     var data = await gasGet({action:'load'});
     if (data && data.names)  names  = data.names;
     if (data && data.colors) colors = data.colors;
-    // GASのレイアウト差分をSEATS_ORIGにマージ
-    // (GASには x,y,rot,w,h のみ保存。img等はSEATS_ORIGから取得)
-    if (data && data.layout && Array.isArray(data.layout) && data.layout.length > 0) {
-      var savedMap = {};
-      data.layout.forEach(function(s) { if(s.id) savedMap[s.id] = s; });
-      // SEATS_ORIGをベースに差分を適用
-      seats = JSON.parse(JSON.stringify(SEATS_ORIG)).map(function(s) {
-        var saved = savedMap[s.id];
-        if (saved) {
-          return Object.assign({}, s, {
-            x: saved.x !== undefined ? saved.x : s.x,
-            y: saved.y !== undefined ? saved.y : s.y,
-            rot: saved.rot !== undefined ? saved.rot : s.rot,
-            w: saved.w || s.w,
-            h: saved.h || s.h
-          });
-        }
-        return s;
-      });
-      // GASにあって SEATS_ORIG にない追加席を末尾に追加
-      data.layout.filter(function(s) {
-        return s.id && s.id.indexOf('seat_add_') === 0 &&
-               !seats.find(function(o) { return o.id === s.id; });
-      }).forEach(function(s) {
-        seats.push({
-          id: s.id, x: s.x||0, y: s.y||0,
-          w: s.w||49, h: s.h||52, rot: s.rot||270,
-          img:'image2.jpg', col:0, row:0, flipH:false, flipV:false
-        });
-      });
-    }
+    // レイアウトはHTMLのSEATS_ORIGを使用（GASから読み込まない）
     renderSeats();
     setSync('ok','同期済 '+new Date().toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit'}));
     if (!silent) toast('✅ 最新データを読み込みました','ok');
