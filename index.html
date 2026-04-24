@@ -284,7 +284,7 @@ function makeSVG(vw,vh,name,colorKey) {
     var lineH=fs*1.4,totalH=lines.length*lineH;
     var sy=deskY+deskH/2-totalH/2+fs*0.8,cx=deskX+deskW/2;
     var ts=lines.map(function(ln,i){return '<tspan x="'+cx.toFixed(1)+'" dy="'+(i===0?0:lineH.toFixed(1))+'">'+ln+'</tspan>';}).join('');
-    textEl='<text x="'+cx.toFixed(1)+'" y="'+sy.toFixed(1)+'" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="'+fs+'" font-weight="700" fill="'+c.text+'" style="pointer-events:none">'+ts+'</text>';
+    textEl='<text x="'+cx.toFixed(1)+'" y="'+sy.toFixed(1)+'" text-anchor="middle" font-family="Noto Sans JP,sans-serif" font-size="'+fs+'" font-weight="700" fill="'+c.text+'" style="pointer-events:none">'+ts+'</text>';
   }
   return '<svg width="'+vw+'" height="'+vh+'" viewBox="0 0 '+vw+' '+vh+'" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible"><rect x="'+deskX+'" y="'+deskY+'" width="'+deskW+'" height="'+deskH+'" rx="3" fill="'+deskFill+'" stroke="'+c.stroke+'" stroke-width="1.5"/><rect x="'+chX+'" y="'+chY+'" width="'+chW+'" height="'+chH+'" rx="'+chR+'" fill="'+c.empty+'" stroke="'+c.stroke+'" stroke-width="1.2"/>'+textEl+'</svg>';
 }
