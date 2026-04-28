@@ -317,17 +317,17 @@ function makeSVG(vw, vh, name, ck) {
     var ts = lns.map(function(ln,i2) {
       return "<tspan x=" + tcx.toFixed(1) + " dy=" + (i2===0?0:lh.toFixed(1)) + ">" + ln + "</tspan>";
     }).join("");
-    te = "<text x=" + tcx.toFixed(1) + " y=" + sy.toFixed(1) +
-         " text-anchor=middle font-family=sans-serif font-size=" + fs +
-         " font-weight=700 fill=\"" + c.text + "\" style=\"pointer-events:none\">" + ts + "</text>";
+    te = '<text x="' + tcx.toFixed(1) + '" y="' + sy.toFixed(1) +
+         '" text-anchor="middle" font-family="sans-serif" font-size="' + fs +
+         '" font-weight="700" fill="' + c.text + '" style="pointer-events:none">' + ts + '</text>';
   }
-  return "<svg width=" + vw + " height=" + vh + " viewBox='0 0 " + vw + " " + vh +
-         "' xmlns=http://www.w3.org/2000/svg style='display:block;overflow:visible'>" +
-         "<rect x=" + dx + " y=" + dy + " width=" + dw + " height=" + dh +
-         " rx=3 fill=" + df + " stroke=" + c.stroke + " stroke-width=1.5/>" +
-         "<rect x=" + cx + " y=" + cy + " width=" + cw + " height=" + ch +
-         " rx=" + cr + " fill=" + c.empty + " stroke=" + c.stroke + " stroke-width=1.2/>" +
-         te + "</svg>";
+  return '<svg width="' + vw + '" height="' + vh + '" viewBox="0 0 ' + vw + ' ' + vh +
+         '" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible">' +
+         '<rect x="' + dx + '" y="' + dy + '" width="' + dw + '" height="' + dh +
+         '" rx="3" fill="' + df + '" stroke="' + c.stroke + '" stroke-width="1.5"/>' +
+         '<rect x="' + cx + '" y="' + cy + '" width="' + cw + '" height="' + ch +
+         '" rx="' + cr + '" fill="' + c.empty + '" stroke="' + c.stroke + '" stroke-width="1.2"/>' +
+         te + '</svg>';
 }
 
 function render() {
